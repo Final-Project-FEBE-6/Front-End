@@ -1,11 +1,10 @@
-import { useState } from 'react'
+import LandingPage from "./Components/Pages/LandingPage"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      
+      <LandingPage/>
     </div>
   )
 }
