@@ -62,7 +62,7 @@ const Navbar = () => {
                     aria-controls="mobile-menu"
                     aria-expanded="false"
                   >
-                    <span className="sr-only">Open main menu</span>
+                    <span className="sr-only ">Open main menu</span>
                     {!isOpen ? (
                       <svg
                         className="block h-6 w-6"
@@ -111,42 +111,42 @@ const Navbar = () => {
               leaveTo="opacity-0 scale-95"
             >
               {(open) => (
-                <div className="md:hidden">
-                  <div open={open} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <div className="md:hidden ml-3">
+                  <div open={open} className="px-2 pt-2 pb-3 space-y-1 sm:px-3 ">
                     <a
                       href="#"
-                      className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-gray-300 hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                       Home
                     </a>
     
                     <a
                       href="#"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-gray-300 hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                       Test
                     </a>
     
                     <a
                       href="#"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-gray-300 hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                       Articel
                     </a>
     
                     <a
                       href="#"
-                      className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-gray-300 hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                       Psikolog
                     </a>
     
-                    <button
+                    <a
                       href="#"
-                      className="outline outline-2 text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-center font-medium"
+                      className="outline outline-2 text-gray-300 hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-center font-medium"
                     >
                       Masuk
-                    </button>
+                    </a>
                   </div>
                 </div>
               )}
