@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+.jawaban {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+h2 {
+    text-align: center;
+    color: blue;
+    margin-bottom: 70px;
+    margin-top: 90px;
+}
+.soal p {
+    margin-bottom: 50px;
+}
+.jawaban button {
+    border: 1px solid rgb(153, 153, 153);
+    font-weight: bold;
+    background-color: #fff;
+    color: black;
+    padding: 5px 0;
+    cursor: pointer;
+    border-radius: 20px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.jawaban button:focus{
+    background-color:rgb(96, 96, 221);
+}
+.tombol {
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+}
+#next {
+    padding: 5px 30px;
+    background-color:rgb(68, 68, 245) ;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+#selesai {
+    display: none;
+    padding: 5px 30px;
+    background-color:rgb(68, 68, 245) ;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.card{
+    border-style: none;
+}

@@ -1,11 +1,17 @@
-import { useState } from 'react'
+import LandingPage from "./pages/Landing/LandingPage";
+import Register from "./pages/Register";
+import { Routes, Route } from "react-router-dom";
+import StressTest from "./pages/StressTest"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/stresstest" element={<StressTest />} />
+      </Routes>
     </div>
   )
 }
