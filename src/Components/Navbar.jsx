@@ -16,7 +16,7 @@ const Navbar = () => {
                     <h1 className='text-white text-2xl font-extrabold '>SapaSikolog.com</h1>
                   </div>
                   <div className="hidden md:block">
-                    <div className="ml-40 flex items-baseline space-x-4">
+                    <div className="ml-20 flex items-baseline space-x-4">
                       <a
                         href="#"
                         className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
