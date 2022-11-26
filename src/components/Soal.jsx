@@ -5,11 +5,12 @@ import picture from '../assets/result.png'
 import {Link} from 'react-router-dom'
 // import ResultCategory from './ResultCategory'
 import {
-  increment_1,
-  increment_2,
-  increment_3,
-  increment_4,
-  increment_5,
+  // increment_1,
+  // increment_2,
+  // increment_3,
+  // increment_4,
+  // increment_5,
+  increment_skor,
 } from "../redux/reducer/SkorReducer"
 import ResultCategory from './ResultCategory'
 
@@ -31,7 +32,13 @@ function Soal() {
   const [index, setIndex] = useState(0)
   const [changeDisplay, setDisplay] = useState(true)
 
+  const dispatch = useDispatch();
+  const [skor, setSkor] = useState(0);
+  const [hasilSkor, setHasilSkor] = useState(0);
+
   const handleClick = () => {
+    dispatch(increment_skor(hasilSkor));
+    setHasilSkor(skor + hasilSkor);
     setIndex(index + 1)
     if (index == soal.length -2) {
       setChangeButton(true)
@@ -39,33 +46,30 @@ function Soal() {
   }
 
   const handleDisplay = () =>{
+    setHasilSkor(skor + hasilSkor);
     setDisplay(false)
   }
 
-
-  const dispatch = useDispatch()
-  const [skor, setSkor] = useState(0)
-
-  const Increment_1 = () => {
-    dispatch(increment_1())
-    setSkor(skor + 1)
-  }
-  const Increment_2 = () => {
-    dispatch(increment_2())
-    setSkor(skor + 2)
-  }
-  const Increment_3 = () => {
-    dispatch(increment_3())
-    setSkor(skor + 3)
-  }
-  const Increment_4 = () => {
-    dispatch(increment_4())
-    setSkor(skor + 4)
-  }
-  const Increment_5 = () => {
-    dispatch(increment_5())
-    setSkor(skor + 5)
-  }
+  // const Increment_1 = () => {
+  //   dispatch(increment_1())
+  //   setSkor(skor + 1)
+  // }
+  // const Increment_2 = () => {
+  //   dispatch(increment_2())
+  //   setSkor(skor + 2)
+  // }
+  // const Increment_3 = () => {
+  //   dispatch(increment_3())
+  //   setSkor(skor + 3)
+  // }
+  // const Increment_4 = () => {
+  //   dispatch(increment_4())
+  //   setSkor(skor + 4)
+  // }
+  // const Increment_5 = () => {
+  //   dispatch(increment_5())
+  //   setSkor(skor + 5)
+  // }
 
   return (
     <>
@@ -73,11 +77,11 @@ function Soal() {
         <h2 className="italic font-bold text-2xl text-white ">SapaSikolog.com</h2>
         <h5 className="text-xl">{soal[index]}</h5>
               <div className="jawaban mt-10 font white">
-                  <button id="1" onClick={Increment_1}>Tidak Pernah</button>
-                  <button id="2" onClick={Increment_2}>Jarang</button>
-                  <button id="3" onClick={Increment_3}>Kadang-kadang</button>
-                  <button id="4" onClick={Increment_4}>Cukup Sering</button>
-                  <button id="5" onClick={Increment_5}>Sering</button>
+                  <button id="1" onClick={() => setSkor(1)}>Tidak Pernah</button>
+                  <button id="2" onClick={() => setSkor(2)}>Jarang</button>
+                  <button id="3" onClick={() => setSkor(3)}>Kadang-kadang</button>
+                  <button id="4" onClick={() => setSkor(4)}>Cukup Sering</button>
+                  <button id="5" onClick={() => setSkor(5)}>Sering</button>
               </div>
         <div className="tombol">
               {changeButton ? 
@@ -93,7 +97,7 @@ function Soal() {
             <h1 className="text-2xl font-black text-violet-400 text-center mt-3 mb-5 shadow-sm">Sapasikolog.com</h1>
               <div className="p-6">
                   <img src={picture} alt="Image Not Found"/>
-                  <h3 className="text-center text-gray-900 text-2xl font-extrabold mb-10">SKOR TES ANDA : {skor}</h3>
+                  <h3 className="text-center text-gray-900 text-2xl font-extrabold mb-10">SKOR TES ANDA : {hasilSkor}</h3>
                   <p className="text-black-700 text-center mb-2">Informasi selengkapnya ada pada card dibawah ini</p>
                   <div className="text-center mt-10">
                     <button
