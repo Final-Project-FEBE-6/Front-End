@@ -6,48 +6,57 @@ import "./Navbar.css"
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
+    const [isLogin, setIsLogin] = useState()
+
     return (
         <div>
-          <nav className="bg-gray-800">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav style={{backgroundColor : '#1B97CC'}}>
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <h1 className='text-white text-2xl font-extrabold '>SapaSikolog.com</h1>
+                    <h1 className='text-white text-3xl font-extrabold '>SapaSikolog.com</h1>
                   </div>
                   <div className="hidden md:block">
                     <div className="ml-20 flex items-baseline space-x-4">
                       <a
-                        href="#"
-                        className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                        href="/"
+                        className=" hover:bg-sky-300 text-white px-2 py-1 rounded-md text-lg font-medium"
                       >
                         Home
                       </a>
     
                       <a
                         href="#"
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                       >
                         Test
                       </a>
     
                       <a
                         href="#"
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                       >
                         Articel
                       </a>
     
                       <a
                         href="#"
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                       >
                         Psikolog
+                      </a>
+
+                      <a
+                        href="\about"
+                        className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
+                      >
+                        About Us
                       </a>
     
                       <button
                         href="#"
-                        className="text-gray-300 outline outline-2 hover:bg-sky-700 hover:text-white px-4 py-2 rounded-md text-sm font-medium"
+                        className="text-white ml-5 outline outline-1 hover:bg-sky-700 hover:text-white px-4 py-1 rounded-md text-lg font-medium"
                       >
                         Masuk
                       </button>
@@ -111,42 +120,49 @@ const Navbar = () => {
               leaveTo="opacity-0 scale-95"
             >
               {(open) => (
-                <div className="md:hidden ml-3">
+                <div className="md:hidden ml-4">
                   <div open={open} className="px-2 pt-2 pb-3 space-y-1 sm:px-3 ">
                     <a
-                      href="#"
-                      className="text-gray-300 hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      href="/"
+                      className="text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                       Home
                     </a>
     
                     <a
                       href="#"
-                      className="text-gray-300 hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-white hover:bg-cyan-500 hover:text-white block px-4 py-2 rounded-md text-base font-medium"
                     >
                       Test
                     </a>
     
                     <a
                       href="#"
-                      className="text-gray-300 hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                       Articel
                     </a>
     
                     <a
                       href="#"
-                      className="text-gray-300 hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className="text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                       Psikolog
                     </a>
-    
+
                     <a
+                      href="\about"
+                      className="text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    >
+                      About Us
+                    </a>
+    
+                    <button
                       href="#"
-                      className="outline outline-2 text-gray-300 hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-center font-medium"
+                      className="outline outline-2 text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-center font-medium"
                     >
                       Masuk
-                    </a>
+                    </button>
                   </div>
                 </div>
               )}
