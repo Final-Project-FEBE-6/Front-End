@@ -10,7 +10,6 @@ import {
   FormGroup,
   TextField,
 } from "@mui/material";
-import "./Nav.css";
 
 const styleModal = {
   position: "absolute",
