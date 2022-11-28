@@ -83,7 +83,7 @@ const AboutUs = () => {
                   </div>
                   
                   <div className='basis-auto object-center ml-10 mr-10'>
-                      <img src={doctor} alt="Image Not Found"/>
+                      <img src={doctor} alt="Not Found"/>
                   </div>
               </div>
             </div>
