@@ -80,7 +80,7 @@ const AboutUs = () => {
     return (
         <>
             <Navbar/>
-            <div className="pt-6 pb-16 bg-sky-100 mt-10 w-14/12 ml-10 mr-10 rounded-lg ">
+            <div className="pt-6 pb-16 bg-sky-100 mt-10 w-14/12 ml-10 mr-10 rounded-lg mt-20">
               <div className="flex lg:flex-row mt-20 gap-20 items-center md : flex-col">
                   <div className='basis-auto ml-20 mr-20'>
                       <h1 className='text-4xl font-extrabold text-base' style={{color : '#1B97CC'}}>Sapasikolog</h1><br />

@@ -7,7 +7,7 @@ const LandingPage = () => {
   return (
     <div className='landing-page'>
       <Navbar/>
-           <div className="pt-6 pb-20 bg-sky-100 rounded-lg mt-10 mr-10 ml-10">
+           <div className="pt-6 pb-20 bg-sky-100 rounded-lg mt-20 mr-10 ml-10">
               <div className="flex lg:flex-row mt-20 gap-20 items-center md : flex-col">
                     <div className='basis-auto ml-10 mr-10'>
                         <h1 className='text-5xl font-extrabold text-base' style={{color : '#1B97CC'}}>Sapasikolog</h1><br />

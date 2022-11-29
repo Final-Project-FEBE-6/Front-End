@@ -10,8 +10,8 @@ const Navbar = () => {
 
     return (
         <div>
-          <nav style={{backgroundColor : '#1B97CC'}}>
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav className='fixed w-full top-0 ' style={{backgroundColor : '#1B97CC'}}>
+            <div className="max-w-6xl px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
@@ -63,7 +63,7 @@ const Navbar = () => {
                     </div>
                   </div>
                 </div>
-                <div className="-mr-2 flex md:hidden">
+                <div className="mr-2 flex md:hidden">
                   <button
                     onClick={() => setIsOpen(!isOpen)}
                     type="button"
