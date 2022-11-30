@@ -35,7 +35,7 @@ export default function Login() {
 
   const navigate = useNavigate()
   const clickNavigate = () => {
-    navigate("/register")
+    navigate("/")
   }
 
   // const handleLogin = async () => {
@@ -72,32 +72,24 @@ export default function Login() {
   // };
   const handleLogin = (e) => {
     e.preventDefault();
+    
     axios
       .post("https://be-skilvul-production.up.railway.app/user/login", {
         email,
         password,
       })
-      .then((response) => {response.json()
-        const user = users.find((us) => {
-          return us.email === email;
-        });
-        if (user === undefined) {
-          throw new Error("User Not Found");
-        }
-        if (password !== user.password) {
-          throw new Error("Email or Password not Correct!");
-        }
+      .then((data) => {
+        localStorage.setItem("token", data.data.token)
+        clickNavigate()
+        alert("Login Berhasil")
       })
       .catch((err) => {
         alert("Form Harus Diisi dengan Benar!");
-      });
-      
-
-      const loginSuccess = (username) => {
-           alert(`Selamat datang ${username}`);
-           return setOpen(false);
-         };
+      }); 
+      console.log("cobbas")
+        
   };
+   
 
   return (
     <div>

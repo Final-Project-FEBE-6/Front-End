@@ -1,8 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {useDispatch} from 'react-redux'
 import "../pages/Result.css"
 import picture from '../assets/result.png'
 import {Link} from 'react-router-dom'
+import axios from 'axios';
 // import ResultCategory from './ResultCategory'
 import {
   // increment_1,
@@ -27,14 +28,23 @@ const soal = [
    "10. Dalam satu minggu terakhir, seberapa sering Kamu merasa bahwa segala sesuatu berjalan sesuai keinginan Kamu?"
   ]
 
+
+
 function SoalStress() {
   const [changeButton, setChangeButton] = useState(false)
   const [index, setIndex] = useState(0)
   const [changeDisplay, setDisplay] = useState(true)
+  // const [noSoal, setNoSoal] = useState([])
 
   const dispatch = useDispatch();
   const [skor, setSkor] = useState(0);
   const [hasilSkor, setHasilSkor] = useState(0);
+
+  // useEffect (() => {
+  //   const soal =  axios.get("https://be-skilvul-production.up.railway.app/tesstress/").then((res) => {
+  //     setNoSoal(res.data)
+  //   })
+  // })
 
   const handleClick = () => {
     dispatch(increment_skor(hasilSkor));
@@ -53,8 +63,8 @@ function SoalStress() {
   return (
     <>
       {changeDisplay ? <div className="" style={{margin : '3rem'}}>
-        <h2 className="italic font-bold text-2xl text-white ">SapaSikolog.com</h2>
-        <h5 className="text-xl">{soal[index]}</h5>
+        <h2 className="italic font-bold text-2xl text-white mb-10">SapaSikolog.com</h2>
+        <h5 className="text-xl text-white">{soal[index]}</h5>
               <div className="jawaban mt-10 font white">
                   <button id="1" onClick={() => setSkor(1)}>Tidak Pernah</button>
                   <button id="2" onClick={() => setSkor(2)}>Jarang</button>
