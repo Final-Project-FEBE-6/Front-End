@@ -2,7 +2,6 @@
 import Register from "./pages/Register";
 import { Routes, Route } from "react-router-dom";
 import StressTest from "./pages/StressTest"
-import { Route, Routes } from "react-router-dom"
 import AboutUs from "./Components/Pages/AboutUs"
 import LandingPage from "./Components/Pages/LandingPage"
 
