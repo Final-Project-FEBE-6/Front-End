@@ -22,7 +22,7 @@ const soal = [
    "5. Dalam satu minggu terakhir, seberapa sering Kamu merasa kesal karena sesuatu yang terjadi secara tidak terduga?",
   ]
 
-function Soal() {
+function SoalKesepian() {
   const [changeButton, setChangeButton] = useState(false)
   const [index, setIndex] = useState(0)
   const [changeDisplay, setDisplay] = useState(true)
@@ -92,4 +92,4 @@ function Soal() {
   )
 }
 
-export default Soal
+export default Soalkesepian;

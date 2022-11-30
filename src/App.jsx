@@ -1,7 +1,7 @@
 // import LandingPage from "./pages/Landing/LandingPage";
 import Register from "./pages/Register";
 import { Routes, Route } from "react-router-dom";
-import StressTest from "./pages/StressTest"
+import StressTest from "./pages/Test"
 import AboutUs from "./Components/Pages/AboutUs"
 import LandingPage from "./Components/Pages/LandingPage"
 

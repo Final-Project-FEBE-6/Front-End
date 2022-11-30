@@ -24,7 +24,7 @@ const soal = [
    "7. Dalam satu minggu terakhir, seberapa sering Kamu merasa yakin terhadap kemampuan Kamu dalam menangani masalah pribadi?",
   ]
 
-function Soal() {
+function SoalOvt() {
   const [changeButton, setChangeButton] = useState(false)
   const [index, setIndex] = useState(0)
   const [changeDisplay, setDisplay] = useState(true)
@@ -94,4 +94,4 @@ function Soal() {
   )
 }
 
-export default Soal
+export default SoalOvt;
