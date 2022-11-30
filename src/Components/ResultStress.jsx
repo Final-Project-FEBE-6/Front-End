@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function ResultCategory() {
+function ResultStress() {
   const kategori = [
     {
       testResult : "Berat",
@@ -49,4 +49,4 @@ function ResultCategory() {
   )
 }
 
-export default ResultCategory
+export default ResultStress

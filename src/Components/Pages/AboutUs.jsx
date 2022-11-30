@@ -1,14 +1,13 @@
 import React from 'react'
 import Navbar from '../Navbar'
 import './Landing.css'
-import boy from './boy.svg'
-import brucel from './foto_brucel.jpg'
-import vanya from './foto_vanya.jpg'
-import diego from './foto_diego.jpeg'
-import himawan from './foto_himawan.jpeg'
-import arif from './foto_dino.png'
-import dino from './foto_arif.jpg'
-import doctor from "./doctor.svg"
+import brucel from './AssetGambar/foto_brucel.jpg'
+import vanya from './AssetGambar/foto_vanya.jpg'
+import diego from './AssetGambar/foto_diego.jpeg'
+import himawan from './AssetGambar/foto_himawan.jpeg'
+import arif from './AssetGambar/foto_dino.png'
+import dino from './AssetGambar/foto_arif.jpg'
+import doctor from "./AssetGambar/doctor.svg"
 
 const AboutUs = () => {
     const about = [
@@ -84,7 +83,7 @@ const AboutUs = () => {
               <div className="flex lg:flex-row mt-20 gap-20 items-center md : flex-col">
                   <div className='basis-auto ml-20 mr-20'>
                       <h1 className='text-4xl font-extrabold text-base' style={{color : '#1B97CC'}}>Sapasikolog</h1><br />
-                      <p className='font-normal text-lg'> <b className='text-2xl' style={{color : '#1B97CC'}}> Sapasikolog </b> merupakan sebuah platform yang menyediakan layanan tes kesehatan mental. Kami berfokus pada tes kesehatan mental bagi remaja dengan rentang usia 18 - 20 tahun</p><br />
+                      <p className='font-normal text-lg'> <b className='text-2xl' style={{color : '#1B97CC'}}> Sapasikolog </b> merupakan sebuah platform yang menyediakan layanan tes kesehatan mental sebagai pendeteksi dini tingkat kesehatan mental yang dimiliki remaja. Kami berfokus pada kesehatan mental bagi remaja dengan rentang usia 18 - 20 tahun.</p><br />
                   </div>
                   
                   <div className='basis-auto object-center ml-10 mr-10'>

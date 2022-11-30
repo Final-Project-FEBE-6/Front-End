@@ -12,7 +12,7 @@ import {
   // increment_5,
   increment_skor,
 } from "../redux/reducer/SkorReducer"
-import ResultCategory from './ResultCategory'
+import ResultCategory from './ResultStress'
 
 const soal = [
    "1. Dalam satu minggu terakhir, seberapa sering Kamu merasa bahwa Kamu tidak dapat mengendalikan hal-hal yang penting dalam hidup Kamu?",
@@ -27,7 +27,7 @@ const soal = [
    "10. Dalam satu minggu terakhir, seberapa sering Kamu merasa bahwa segala sesuatu berjalan sesuai keinginan Kamu?"
   ]
 
-function Soal() {
+function SoalStress() {
   const [changeButton, setChangeButton] = useState(false)
   const [index, setIndex] = useState(0)
   const [changeDisplay, setDisplay] = useState(true)
@@ -49,27 +49,6 @@ function Soal() {
     setHasilSkor(skor + hasilSkor);
     setDisplay(false)
   }
-
-  // const Increment_1 = () => {
-  //   dispatch(increment_1())
-  //   setSkor(skor + 1)
-  // }
-  // const Increment_2 = () => {
-  //   dispatch(increment_2())
-  //   setSkor(skor + 2)
-  // }
-  // const Increment_3 = () => {
-  //   dispatch(increment_3())
-  //   setSkor(skor + 3)
-  // }
-  // const Increment_4 = () => {
-  //   dispatch(increment_4())
-  //   setSkor(skor + 4)
-  // }
-  // const Increment_5 = () => {
-  //   dispatch(increment_5())
-  //   setSkor(skor + 5)
-  // }
 
   return (
     <>
@@ -117,4 +96,4 @@ function Soal() {
   )
 }
 
-export default Soal
+export default SoalStress

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from "react";
+import {Link} from 'react-router-dom'
 import { Transition } from "@headlessui/react";
 import "./Navbar.css"
 
@@ -10,7 +11,7 @@ const Navbar = () => {
 
     return (
         <div>
-          <nav className='fixed w-full top-0 ' style={{backgroundColor : '#1B97CC'}}>
+          <nav className='fixed w-full top-0 mb-50' style={{backgroundColor : '#1B97CC'}}>
             <div className="max-w-6xl px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
@@ -27,7 +28,7 @@ const Navbar = () => {
                       </a>
     
                       <a
-                        href="#"
+                        href="/test"
                         className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                       >
                         Test
@@ -48,17 +49,16 @@ const Navbar = () => {
                       </a>
 
                       <a
-                        href="\about"
+                        href="/about"
                         className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                       >
                         About
                       </a>
     
                       <button
-                        href="#"
                         className="text-white ml-5 outline outline-1 hover:bg-sky-700 hover:text-white px-4 py-1 rounded-md text-lg font-medium"
                       >
-                        Masuk
+                        <Link to={"/register"}>Masuk</Link>
                       </button>
                     </div>
                   </div>
@@ -130,7 +130,7 @@ const Navbar = () => {
                     </a>
     
                     <a
-                      href="#"
+                      href="/test"
                       className="text-white hover:bg-cyan-500 hover:text-white block px-4 py-2 rounded-md text-base font-medium"
                     >
                       Test
@@ -158,7 +158,7 @@ const Navbar = () => {
                     </a>
     
                     <button
-                      href="#"
+                      href="/register"
                       className="outline outline-2 text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-center font-medium"
                     >
                       Masuk

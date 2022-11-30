@@ -5,14 +5,9 @@ import picture from '../assets/result.png'
 import {Link} from 'react-router-dom'
 // import ResultCategory from './ResultCategory'
 import {
-  // increment_1,
-  // increment_2,
-  // increment_3,
-  // increment_4,
-  // increment_5,
   increment_skor,
 } from "../redux/reducer/SkorReducer"
-import ResultCategory from './ResultCategory'
+import ResultStress from './ResultStress'
 
 const soal = [
    "1. Dalam satu minggu terakhir, seberapa sering Kamu merasa bahwa Kamu tidak dapat mengendalikan hal-hal yang penting dalam hidup Kamu?",
@@ -86,7 +81,7 @@ function SoalKesepian() {
           </div>
         </div>
       </div>
-      <ResultCategory/>
+      <ResultStress/>
     </div>}
     </>
   )

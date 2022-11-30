@@ -4,15 +4,8 @@ import "../pages/Result.css"
 import picture from '../assets/result.png'
 import {Link} from 'react-router-dom'
 // import ResultCategory from './ResultCategory'
-import {
-  // increment_1,
-  // increment_2,
-  // increment_3,
-  // increment_4,
-  // increment_5,
-  increment_skor,
-} from "../redux/reducer/SkorReducer"
-import ResultCategory from './ResultCategory'
+import { increment_skor,} from "../redux/reducer/SkorReducer"
+import ResultCategory from './ResultStress'
 
 const soal = [
    "1. Dalam satu minggu terakhir, seberapa sering Kamu merasa bahwa Kamu tidak dapat mengendalikan hal-hal yang penting dalam hidup Kamu?",
@@ -81,7 +74,7 @@ function SoalOvt() {
                       type="button"
                       className="inline-block px-6 py-2.5 bg-violet-200 text-black font-medium text-s leading-tight uppercase rounded shadow-md hover:bg-violet-400 hover:shadow-lg text-white focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                     >
-                      <Link to={"/"}> HOME</Link>
+                      <Link to={"/"}>HOME</Link>
                     </button>
                 </div>
             </div>
