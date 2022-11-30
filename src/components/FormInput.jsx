@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import {Link, useNavigate} from 'react-router-dom'
-import LandingPage from '../pages/Landing/LandingPage';
-import Login from "./Login";
+// import LandingPage from '../pages/Landing/LandingPage';
+// import Login from "./Login";
+// import StressTest from "./pages/StressTest"
 
 function FormInput() {
   const [name, setName] = useState("");
@@ -14,7 +15,7 @@ function FormInput() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://634f638adf22c2af7b502de8.mockapi.io/users", {
+      .post("https://be-skilvul-production.up.railway.app/user/register", {
         name,
         email,
         password,
