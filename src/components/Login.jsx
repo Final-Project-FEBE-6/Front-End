@@ -1,4 +1,5 @@
 import * as React from "react";
+import axios from "axios";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -37,37 +38,65 @@ export default function Login() {
     navigate("/register")
   }
 
-  const handleLogin = async () => {
-    // *IF API STATUS 200
-    try {
-      const users = await fetch(
-        "https://634f638adf22c2af7b502de8.mockapi.io/users"
-      ).then((response) => response.json());
+  // const handleLogin = async () => {
+  //   // *IF API STATUS 200
+  //   try {
+  //     const users = await fetch(
+  //       "https://be-skilvul-production.up.railway.app/user/login"
+  //     ).then((response) => response.json());
 
-      const user = users.find((us) => {
-        return us.email === email;
+  //     const user = users.find((us) => {
+  //       return us.email === email;
+  //     });
+
+  //     if (user === undefined) {
+  //       throw new Error("User Not Found");
+  //     }
+  //     if (password !== user.password) {
+  //       throw new Error("Email or Password not Correct!");
+  //     }
+
+  //     // Todo: IF LOGIN SUCCESS
+  //     localStorage.setItem("name", user.name);
+  //     return loginSuccess(user.name);
+
+  //     // *IF API STATUS 404
+  //   } catch (error) {
+  //     alert(error.message);
+  //   }
+  // };
+
+  // const loginSuccess = (username) => {
+  //   alert(`Selamat datang ${username}`);
+  //   return setOpen(false);
+  // };
+  const handleLogin = (e) => {
+    e.preventDefault();
+    axios
+      .post("https://be-skilvul-production.up.railway.app/user/login", {
+        email,
+        password,
+      })
+      .then((response) => {response.json()
+        const user = users.find((us) => {
+          return us.email === email;
+        });
+        if (user === undefined) {
+          throw new Error("User Not Found");
+        }
+        if (password !== user.password) {
+          throw new Error("Email or Password not Correct!");
+        }
+      })
+      .catch((err) => {
+        alert("Form Harus Diisi dengan Benar!");
       });
+      
 
-      if (user === undefined) {
-        throw new Error("User Not Found");
-      }
-      if (password !== user.password) {
-        throw new Error("Email or Password not Correct!");
-      }
-
-      // Todo: IF LOGIN SUCCESS
-      localStorage.setItem("name", user.name);
-      return loginSuccess(user.name);
-
-      // *IF API STATUS 404
-    } catch (error) {
-      alert(error.message);
-    }
-  };
-
-  const loginSuccess = (username) => {
-    alert(`Selamat datang ${username}`);
-    return setOpen(false);
+      const loginSuccess = (username) => {
+           alert(`Selamat datang ${username}`);
+           return setOpen(false);
+         };
   };
 
   return (

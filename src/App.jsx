@@ -7,6 +7,7 @@ import Test from "./pages/Test";
 import SoalStress from "./Components/SoalStress";
 import SoalKesepian from "./Components/SoalKesepian";
 import SoalOvt from "./Components/SoalOvt";
+import Login from "./Components/Login";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/stress" element={<SoalStress/>}/>
         <Route path="/kesepian" element={<SoalKesepian/>}/>
         <Route path="/ovt" element={<SoalOvt/>}/>
+        <Route path="/login" element={<Login/>}/>
       </Routes>
     </div>
   )

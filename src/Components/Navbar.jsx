@@ -58,7 +58,7 @@ const Navbar = () => {
                       <button
                         className="text-white ml-5 outline outline-1 hover:bg-sky-700 hover:text-white px-4 py-1 rounded-md text-lg font-medium"
                       >
-                        <Link to={"/register"}>Masuk</Link>
+                        <Link to={"/login"}>Masuk</Link>
                       </button>
                     </div>
                   </div>
@@ -158,7 +158,7 @@ const Navbar = () => {
                     </a>
     
                     <button
-                      href="/register"
+                      href="/login"
                       className="outline outline-2 text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-center font-medium"
                     >
                       Masuk
