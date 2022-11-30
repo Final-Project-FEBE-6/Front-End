@@ -11,6 +11,11 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@headlessui/react": "^1.7.4",
+    "@material-tailwind/react": "^1.2.4",
+    "@mui/material": "^5.10.15",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.10.15",
     "axios": "^1.2.0",
     "flowbite": "^1.5.4",

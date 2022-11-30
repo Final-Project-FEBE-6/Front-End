@@ -2,6 +2,9 @@
 import Register from "./pages/Register";
 import { Routes, Route } from "react-router-dom";
 import StressTest from "./pages/StressTest"
+import { Route, Routes } from "react-router-dom"
+import AboutUs from "./Components/Pages/AboutUs"
+import LandingPage from "./Components/Pages/LandingPage"
 
 function App() {
 
@@ -10,7 +13,9 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<LandingPage />} /> */}
         <Route path="/register" element={<Register />} />
-        <Route path="/" element={<StressTest />} />
+        <Route path="/stressTest" element={<StressTest />} />
+        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/about" element={<AboutUs/>}/>
       </Routes>
     </div>
   )
