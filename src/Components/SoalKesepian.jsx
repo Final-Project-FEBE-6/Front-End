@@ -92,4 +92,4 @@ function SoalKesepian() {
   )
 }
 
-export default Soalkesepian;
+export default SoalKesepian;
