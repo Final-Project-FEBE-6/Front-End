@@ -5,16 +5,19 @@ import picture from '../assets/result.png'
 import {Link} from 'react-router-dom'
 // import ResultCategory from './ResultCategory'
 import { increment_skor,} from "../redux/reducer/SkorReducer"
-import ResultCategory from './ResultStress'
+import ResultOvt from './ResultOvt'
 
 const soal = [
-   "1. Dalam satu minggu terakhir, seberapa sering Kamu merasa bahwa Kamu tidak dapat mengendalikan hal-hal yang penting dalam hidup Kamu?",
-   "2. Dalam satu minggu terakhir, seberapa sering Kamu menemukan bahwa Kamu tidak dapat mengatasi segala hal yang harus dilakukan?",
-   "3. Dalam satu minggu terakhir, seberapa sering Kamu merasa gelisah dan stres?",
-   "4. Dalam satu minggu terakhir, seberapa sering Kamu mampu mengendalikan hal-hal yang mengganggu dalam hidup Kamu?",
-   "5. Dalam satu minggu terakhir, seberapa sering Kamu merasa kesal karena sesuatu yang terjadi secara tidak terduga?",
-   "6. Dalam satu minggu terakhir, seberapa sering Kamu merasa ada berbagai kesulitan yang menumpuk begitu banyak sehingga Kamu tidak dapat mengatasinya?",
-   "7. Dalam satu minggu terakhir, seberapa sering Kamu merasa yakin terhadap kemampuan Kamu dalam menangani masalah pribadi?",
+  "1. Apakah kamu pernah berpikir “Aku kesepian”? ",
+  "2. Apakah kamu pernah berpikir “Ketika aku tidak dapat keluar dari kondisi ini , aku tidak bisa melanjutkan study?“ ",
+  "3. Apakah kamu pernah berpikir “Aku lelah dan tidak nyaman dengan kondisi ini” ",
+  "4. Apakah menurut kamu “Berkonsentrasi adalah hal yang sulit” ? ",
+  "5. Apakah kamu pernah berpikir “Aku tidak termotivasi untuk melakukan aktivitas apapun?“ ",
+  "6. Apakah kamu pernah mencoba menganalisis hal yang baru saja terjadi untuk mencari penyebab mengapa aku merasa depresi",
+  "7. Apakah kamu pernah menuliskan isi pikiranmu dan menganalisis dengan lebih dalam",
+  "8. Apakah kamu pernah memikirkan situasi saat ini dan berharap andai saja kondisinya lebih baik",
+  "9. Apakah kamu pernah berpikir Aku tidak dapat berkonsentrasi jika terus menerus merasakan hal ini",
+  "10. Apakah kamu pernah memikirkan semua kegagalan, kekurangan, dan kesalahan yang kamu alami",
   ]
 
 function SoalOvt() {
@@ -43,21 +46,24 @@ function SoalOvt() {
 
   return (
     <>
-      {changeDisplay ? <div className="" style={{margin : '3rem'}}>
-        <h2 className="italic font-bold text-2xl text-white ">SapaSikolog.com</h2>
-        <h5 className="text-xl">{soal[index]}</h5>
-              <div className="jawaban mt-10 font white">
-                  <button id="1" onClick={() => setSkor(1)}>Tidak Pernah</button>
-                  <button id="2" onClick={() => setSkor(2)}>Jarang</button>
-                  <button id="3" onClick={() => setSkor(3)}>Kadang-kadang</button>
-                  <button id="4" onClick={() => setSkor(4)}>Cukup Sering</button>
-                  <button id="5" onClick={() => setSkor(5)}>Sering</button>
-              </div>
-        <div className="tombol">
-              {changeButton ? 
-              <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl" onClick={handleDisplay}>Selesai</button> : 
-              <button className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" onClick={handleClick}>Selanjutnya</button>}
-        </div>
+      {changeDisplay ? 
+      <div className="pt-6 pb-16 bg-sky-100 w-14/12 mt-10 ml-10 mr-10 rounded-lg">
+      <div className="">
+          <h2 className="italic font-bold text-2xl mt-5 ml-10" style={{color : '#1B97CC'}}>SapaSikolog.com</h2>
+          <p className="text-xl mt-10 ml-10">{soal[index]}</p>
+                <div className="jawaban mt-10 font white mr-10 ml-10">
+                    <button id="1" onClick={() => setSkor(1)}>Tidak Pernah</button>
+                    <button id="2" onClick={() => setSkor(2)}>Jarang</button>
+                    <button id="3" onClick={() => setSkor(3)}>Kadang-kadang</button>
+                    <button id="4" onClick={() => setSkor(4)}>Cukup Sering</button>
+                    <button id="5" onClick={() => setSkor(5)}>Sering</button>
+                </div>
+          <div className="tombol">
+                {changeButton ? 
+                <button className="bg-red-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-xl mr-10" onClick={handleDisplay}>Selesai</button> : 
+                <button className="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-xl mr-10" onClick={handleClick}>Selanjutnya</button>}
+          </div>
+      </div>
     </div>
     : 
     <div className='card-result'>
@@ -81,7 +87,7 @@ function SoalOvt() {
           </div>
         </div>
       </div>
-      <ResultCategory/>
+      <ResultOvt/>
     </div>}
     </>
   )

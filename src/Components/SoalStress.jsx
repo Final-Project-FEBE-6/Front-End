@@ -62,21 +62,24 @@ function SoalStress() {
 
   return (
     <>
-      {changeDisplay ? <div className="" style={{margin : '3rem'}}>
-        <h2 className="italic font-bold text-2xl text-white mb-10">SapaSikolog.com</h2>
-        <h5 className="text-xl text-white">{soal[index]}</h5>
-              <div className="jawaban mt-10 font white">
-                  <button id="1" onClick={() => setSkor(1)}>Tidak Pernah</button>
-                  <button id="2" onClick={() => setSkor(2)}>Jarang</button>
-                  <button id="3" onClick={() => setSkor(3)}>Kadang-kadang</button>
-                  <button id="4" onClick={() => setSkor(4)}>Cukup Sering</button>
-                  <button id="5" onClick={() => setSkor(5)}>Sering</button>
-              </div>
-        <div className="tombol">
-              {changeButton ? 
-              <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl" onClick={handleDisplay}>Selesai</button> : 
-              <button className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" onClick={handleClick}>Selanjutnya</button>}
-        </div>
+      {changeDisplay ? 
+      <div className="pt-6 pb-16 bg-sky-100 w-14/12 mt-10 ml-10 mr-10 rounded-lg">
+      <div className="">
+          <h2 className="italic font-bold text-2xl mt-5 ml-10" style={{color : '#1B97CC'}}>SapaSikolog.com</h2>
+          <p className="text-xl mt-10 ml-10">{soal[index]}</p>
+                <div className="jawaban mt-10 font white mr-10 ml-10">
+                    <button id="1" onClick={() => setSkor(1)}>Tidak Pernah</button>
+                    <button id="2" onClick={() => setSkor(2)}>Jarang</button>
+                    <button id="3" onClick={() => setSkor(3)}>Kadang-kadang</button>
+                    <button id="4" onClick={() => setSkor(4)}>Cukup Sering</button>
+                    <button id="5" onClick={() => setSkor(5)}>Sering</button>
+                </div>
+          <div className="tombol">
+                {changeButton ? 
+                <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl mr-10" onClick={handleDisplay}>Selesai</button> : 
+                <button className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl mr-10" onClick={handleClick}>Selanjutnya</button>}
+          </div>
+      </div>
     </div>
     : 
     <div className='card-result'>

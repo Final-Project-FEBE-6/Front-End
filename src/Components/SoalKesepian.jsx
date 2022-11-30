@@ -7,14 +7,19 @@ import {Link} from 'react-router-dom'
 import {
   increment_skor,
 } from "../redux/reducer/SkorReducer"
-import ResultStress from './ResultStress'
+import ResultKesepian from './ResultKesepian'
 
 const soal = [
-   "1. Dalam satu minggu terakhir, seberapa sering Kamu merasa bahwa Kamu tidak dapat mengendalikan hal-hal yang penting dalam hidup Kamu?",
-   "2. Dalam satu minggu terakhir, seberapa sering Kamu menemukan bahwa Kamu tidak dapat mengatasi segala hal yang harus dilakukan?",
-   "3. Dalam satu minggu terakhir, seberapa sering Kamu merasa gelisah dan stres?",
-   "4. Dalam satu minggu terakhir, seberapa sering Kamu mampu mengendalikan hal-hal yang mengganggu dalam hidup Kamu?",
-   "5. Dalam satu minggu terakhir, seberapa sering Kamu merasa kesal karena sesuatu yang terjadi secara tidak terduga?",
+   "1. Seberapa sering kamu merasa tidak bisa meminta bantuan ke siapapun? ",
+   "2. Seberapa sering kamu merasa sendirian?",
+   "3. Seberapa sering kamu merasa cocok dengan orang-orang di sekitarmu? ",
+   "4. Seberapa sering kamu merasa tidak memiliki sahabat? ",
+   "5. Seberapa sering kamu merasa bahwa kamu memiliki banyak kesamaan dengan orang di sekitarmu?",
+   "6. Seberapa sering kamu merasa sebagai orang yang ramah dan mudah bergaul dengan orang lain?",
+   "7. Seberapa sering kamu merasa dikucilkan oleh orang lain?",
+   "8. Seberapa sering kamu merasa hubungan kamu dengan orang lain tidak bermakna?",
+   "9. Seberapa sering kamu merasa terasing dari orang lain?",
+   "10. Seberapa sering kamu merasa bahwa kamu memiliki teman untuk bercerita?",
   ]
 
 function SoalKesepian() {
@@ -43,22 +48,25 @@ function SoalKesepian() {
 
   return (
     <>
-      {changeDisplay ? <div className="" style={{margin : '3rem'}}>
-        <h2 className="italic font-bold text-2xl text-white ">SapaSikolog.com</h2>
-        <h5 className="text-xl">{soal[index]}</h5>
-              <div className="jawaban mt-10 font white">
-                  <button id="1" onClick={() => setSkor(1)}>Tidak Pernah</button>
-                  <button id="2" onClick={() => setSkor(2)}>Jarang</button>
-                  <button id="3" onClick={() => setSkor(3)}>Kadang-kadang</button>
-                  <button id="4" onClick={() => setSkor(4)}>Cukup Sering</button>
-                  <button id="5" onClick={() => setSkor(5)}>Sering</button>
-              </div>
-        <div className="tombol">
-              {changeButton ? 
-              <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl" onClick={handleDisplay}>Selesai</button> : 
-              <button className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" onClick={handleClick}>Selanjutnya</button>}
+      {changeDisplay ? 
+      <div className="pt-6 pb-16 bg-sky-100 w-14/12 mt-10 ml-10 mr-10 rounded-lg">
+        <div className="">
+            <h2 className="italic font-bold text-2xl mt-5 ml-10" style={{color : '#1B97CC'}}>SapaSikolog.com</h2>
+            <p className="text-xl mt-10 ml-10">{soal[index]}</p>
+                  <div className="jawaban mt-10 font white mr-10 ml-10">
+                      <button id="1" onClick={() => setSkor(1)}>Tidak Pernah</button>
+                      <button id="2" onClick={() => setSkor(2)}>Jarang</button>
+                      <button id="3" onClick={() => setSkor(3)}>Kadang-kadang</button>
+                      <button id="4" onClick={() => setSkor(4)}>Cukup Sering</button>
+                      <button id="5" onClick={() => setSkor(5)}>Sering</button>
+                  </div>
+            <div className="tombol">
+                  {changeButton ? 
+                  <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl mr-10" onClick={handleDisplay}>Selesai</button> : 
+                  <button className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl mr-10" onClick={handleClick}>Selanjutnya</button>}
+            </div>
         </div>
-    </div>
+      </div>
     : 
     <div className='card-result'>
       <div className="mt-10">
@@ -81,7 +89,7 @@ function SoalKesepian() {
           </div>
         </div>
       </div>
-      <ResultStress/>
+      <ResultKesepian/>
     </div>}
     </>
   )

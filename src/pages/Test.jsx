@@ -53,9 +53,9 @@ function Test() {
                   </div>
                 </div>
             </div>
-            <div className="flex justify-center ">
+            <div className="flex justify-center">
                 <div className="rounded-lg shadow-lg bg-white max-w-md shadow-md">
-                  <h1 className="text-2xl font-black text-violet-400 text-center mt-3 mb-5 shadow-sm">Sapasikolog.com</h1>
+                  <h1 className="text-2xl font-black text-violet-400 text-center mt-3 mb-5">Sapasikolog.com</h1>
                     <div className="p-6">
                         <img src={ovt} className="rounded-full" alt="" />
                         <h3 className="text-center text-gray-900 text-2xl font-extrabold mb-5 mt-3">TES TINGKAT OVERTHINKING</h3>
