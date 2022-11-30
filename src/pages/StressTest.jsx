@@ -1,11 +1,11 @@
 import React from 'react'
-import Soal from '../components/Soal'
+import SoalStress from '../components/SoalStress'
 import './Soal.css'
 
 function StressTest() {
   return (
     <div>
-        <Soal/>
+        <SoalStress/>
     </div>
   )
 }
