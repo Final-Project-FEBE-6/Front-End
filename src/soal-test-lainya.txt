@@ -1,0 +1,62 @@
+{/*Instruksi awal*/}
+Tes Tingkat Rasa Kesepian
+Rasa kesepian yang tinggi dikhawatirkan dapat memicu masalah terhadap kesehatan mental kamu. 
+Cek tingkat kesepianmu sebagai langkah awal dalam mengurangi risiko.
+
+{/*Soal test tingkat kesepian*/}\
+SoalTest = [
+    {soal : " Seberapa sering kamu merasa tidak bisa meminta bantuan ke siapapun? "}
+    {soal : " Seberapa sering kamu merasa sendirian?"}
+    {soal : " Seberapa sering kamu merasa cocok dengan orang-orang di sekitarmu? "}
+    {soal : " Seberapa sering kamu merasa tidak memiliki sahabat? "}
+    {soal : " Seberapa sering kamu merasa bahwa kamu memiliki banyak kesamaan dengan orang di sekitarmu?"}
+    {soal : " Seberapa sering kamu merasa sebagai orang yang ramah dan mudah bergaul dengan orang lain?"}
+    {soal : " Seberapa sering kamu merasa dikucilkan oleh orang lain?"}
+    {soal : " Seberapa sering kamu merasa hubungan kamu dengan orang lain tidak bermakna?"}
+    {soal : " Seberapa sering kamu merasa terasing dari orang lain?"}
+    {soal : " Seberapa sering kamu merasa bahwa kamu memiliki teman untuk bercerita?"}
+]
+
+{/*Instruksi awal*/}
+Tes Overthinking (Rumination)
+Ruminasi: Cara seseorang berpikir mengenai suatu hal secara berulang-ulang; terlalu mengkhawatirkan masa lalu; 
+atau memikirkan hal yang sama.
+
+INSTRUKSI:
+
+Kebanyakan orang berpikir dan melakukan berbagai hal ketika mereka merasa sedih, murung, atau depresi.
+
+Berikut daftar dari beberapa kemungkinan tersebut. Bacalah pernyataan pada tes berikut dan baca pernyataan pada tiap nomornya. 
+Pernyataan tersebut berisikan apa yang dipikirkan atau dilakukan oleh orang ketika merasa sedih, murung, atau depresi.  
+Pilihlah 1 dari 4 pilihan yang ada (tidak pernah, terkadang, sering, atau selalu).
+
+Tes ini dapat membantumu mengenal diri lebih dalam namun harap tidak menjadikan tes ini sebagai patokan mengenai dirimu. 
+
+{/*Soal test tingkat OVT*/}
+SoalTest = [
+    {soal : "Apakah kamu pernah berpikir “Aku kesepian”? "},
+    {soal : "Apakah kamu pernah berpikir “Ketika aku tidak dapat keluar dari kondisi ini , aku tidak bisa melanjutkan study?“ "},
+    {soal : "Apakah kamu pernah berpikir “Aku lelah dan tidak nyaman dengan kondisi ini”"},
+    {soal : "Apakah menurut kamu “Berkonsentrasi adalah hal yang sulit” ? "},
+    {soal : "Apakah kamu pernah berpikir “Aku tidak termotivasi untuk melakukan aktivitas apapun”"},
+    {soal : "Apakah kamu pernah mencoba menganalisis hal yang baru saja terjadi untuk mencari penyebab mengapa aku merasa depresi"},
+    {soal : "Apakah kamu pernah menuliskan isi pikiranmu dan menganalisis dengan lebih dalam"},
+    {soal : "Apakah kamu pernah memikirkan situasi saat ini dan berharap andai saja kondisinya lebih baik"},
+    {soal : "Apakah kamu pernah berpikir "Aku tidak dapat berkonsentrasi jika terus menerus merasakan hal ini""},
+    {soal : "Apakah kamu pernah memikirkan semua kegagalan, kekurangan, dan kesalahan yang kamu alami"},
+]
+
+{/*hasil*/}
+*Keterangan Skor:
+
+22 (Skor terendah) = Rendah
+Kamu dapat mengendalikan pikiran-pikiran negatifmu dengan baik. 
+Kamu tidak terlalu fokus pada kejadian dan perasaan negatif yang pernah kamu alami. 
+
+42 (Skor kamu ada disini)
+
+88 (Skor tertinggi) = Tinggi
+Kamu memikirkan hal negatif secara berulang. 
+Kamu juga tidak dapat mengendalikan hal tersebut. 
+Kamu terlalu fokus pada kejadian dan perasaan negatif yang pernah kamu alami. 
+Hal ini yang terkadang membuatmu sulit beraktivitas sehari-hari, seperti berkonsentrasi.
