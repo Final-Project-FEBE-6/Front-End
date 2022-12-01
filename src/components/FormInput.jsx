@@ -25,7 +25,7 @@ function FormInput() {
         setEmail("");
         setPassword("");
         alert("Selamat, Anda Berhasil Registrasi");
-        navigate("/")
+        navigate("/login")
       })
       .catch((err) => {
         alert("Form Harus Diisi dengan Benar!");
