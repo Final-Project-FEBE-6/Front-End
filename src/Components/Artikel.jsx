@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react"
 function Artikel() {
     useEffect => {
         const token = localStorage.getItem("token")
-        axios.get("https://be-skilvul-production.up.railway.app/artikel")
+        axios.get(`https://be-skilvul-production.up.railway.app/artikel/${token}`)
         .then
     }
   return (

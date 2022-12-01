@@ -19,15 +19,17 @@ const Article = () => {
 
   useEffect(function () {
     axios
-      .get("https://api.spaceflightnewsapi.net/v3/articles")
+      .get(`https://be-skilvul-production.up.railway.app/artikel`, {
+        headers: { Authorization: `Bearer ` + localStorage.getItem("token") },
+      })
       .then((response) => {
-        setArticles(response.data);
+        setArticles(response.data.data);
         setLoading(false);
       });
   }, []);
 
   return (
-    <div className="article" style={{backgroundColor: '#ddd'}}>
+    <div className="article" style={{ backgroundColor: "#ddd" }}>
       <Box
         sx={{ display: "flex", justifyContent: "center", color: "#222" }}
         className="articleBox"
@@ -47,30 +49,30 @@ const Article = () => {
                 return (
                   <div className="  ">
                     <Card
+                    key={article.judul}
                       className="articleCard"
-                      key={article.id}
                       sx={{ mt: 2, color: "#222", backgroundColor: "#eaeaea" }}
                     >
                       <CardActionArea
                         className="articleCardAction"
                         onClick={() => {
-                          navigate(`/article/${article.id}`);
+                          navigate(`/article/${article._id}`);
                         }}
                       >
                         <CardMedia
                           component="img"
-                          image={article.imageUrl}
-                          alt={article.title}
-                          sx={{height:'200px'}}
+                          image={article.image}
+                          alt={article.judul}
+                          sx={{ height: "200px" }}
                         />
                         <CardContent className="articleContent" sx={{}}>
-                          <h2 className="articleTitle">{article.title}</h2>
+                          <h2 className="articleTitle">{article.judul}</h2>
                           <Typography
                             variant="body2"
                             mt="8px"
                             sx={{ color: "#999" }}
                           >
-                            {new Date(article.publishedAt).toLocaleDateString()}
+                            {new Date(article.tgl_publish).toLocaleDateString()}
                           </Typography>
                         </CardContent>
                       </CardActionArea>

@@ -12,8 +12,10 @@ const PsikologList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(function () {
-    axios.get("https://digimon-api.vercel.app/api/digimon").then((response) => {
-      setPsikologs(response.data);
+    axios.get(`https://be-skilvul-production.up.railway.app/psikolog`, {headers: {'Authorization': `Bearer ` + localStorage.getItem('token')}})
+    .then((response) => {
+      console.log(response.data.data);
+      setPsikologs(response.data.data);
       setLoading(false);
     });
   }, []);
@@ -30,7 +32,7 @@ const PsikologList = () => {
             return (
               <Card
                 className="psikologCard"
-                key={psikolog.name}
+                key={psikolog._id}
                 sx={{
                   display: "flex",
                   width: "70%",
@@ -41,23 +43,20 @@ const PsikologList = () => {
                 <div className="psikologImageBox">
                   <img
                     className="psikologImage"
-                    src={psikolog.img}
-                    alt={psikolog.name}
+                    src={psikolog.gambar}
+                    alt={psikolog.nama}
                   />
                 </div>
                 <CardContent
                   sx={{ marginLeft: "2%", marginRight: "4%", color: "#222" }}
                 >
                   <h1 className="psikologTitle">PSIKOLOG</h1>
-                  <p className="psikologDescription">Nama: {psikolog.name}</p>
+                  <p className="psikologDescription">Nama: {psikolog.nama}</p>
                   <p className="psikologDescription">
-                    Status: {psikolog.level}
+                    Alamat: {psikolog.alamat}
                   </p>
-                  <p className="psikologDescription">Pengalaman: turu</p>
-                  <WhatsAppIcon
-                    className="iconWa"
-                    sx={{ fontSize: "36px" }}
-                  />
+                  <p className="psikologDescription">Pengalaman: {psikolog.pengalaman}</p>
+                  <WhatsAppIcon className="iconWa" sx={{ fontSize: "36px" }} />
                 </CardContent>
               </Card>
             );

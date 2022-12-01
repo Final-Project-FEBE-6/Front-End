@@ -13,10 +13,11 @@ const ArticleDetail = () => {
   useEffect(
     function () {
       axios
-        .get(`https://api.spaceflightnewsapi.net/v3/articles/${params.id}`)
+        .get(`https://be-skilvul-production.up.railway.app/artikel/${params._id}`, {headers: {'Authorization': `Bearer ` + localStorage.getItem('token')}})
         .then((response) => {
-          setArticle(response.data);
-          setLoading(false);
+          console.log(response.data);
+          // setArticle(response.data.data);
+          // setLoading(false);
         });
     },
     [params]

@@ -35,8 +35,10 @@ export default function Login() {
 
   const navigate = useNavigate()
   const clickNavigate = () => {
-    navigate("/")
+    navigate("/register")
   }
+
+  
 
   // const handleLogin = async () => {
   //   // *IF API STATUS 200
@@ -80,7 +82,7 @@ export default function Login() {
       })
       .then((data) => {
         localStorage.setItem("token", data.data.token)
-        clickNavigate()
+        navigate("/")
         alert("Login Berhasil")
       })
       .catch((err) => {

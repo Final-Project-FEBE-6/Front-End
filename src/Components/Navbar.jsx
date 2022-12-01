@@ -3,6 +3,7 @@ import { useState } from "react";
 import {Link} from 'react-router-dom'
 import { Transition } from "@headlessui/react";
 import "./Navbar.css"
+import Login from './Login';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -55,11 +56,7 @@ const Navbar = () => {
                         About
                       </a>
     
-                      <button
-                        className="text-white ml-5 outline outline-1 hover:bg-sky-700 hover:text-white px-4 py-1 rounded-md text-lg font-medium"
-                      >
-                        <Link to={"/login"}>Masuk</Link>
-                      </button>
+                      <Login />
                     </div>
                   </div>
                 </div>
