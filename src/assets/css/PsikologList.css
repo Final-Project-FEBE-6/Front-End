@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+.psikologLoading {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    z-index: 9;
+    animation: .8s spin infinite linear;
+    color: #1B97CC;
+}
+
+/* animation loading */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.psikologSection {
+    margin-left: 100px;
+}
+
+.psikologImageBox {
+    display: flex;
+    align-items: center;
+}
+
+.psikologImage {
+    max-width: 250px;
+    margin: 10px;
+    padding: 8px;
+}
+
+.psikologTitle {
+    font-size: 30px;
+    border-bottom: 1px solid #eee;
+    margin-top: 15px;
+}
+
+.psikologDescription {
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.boxIcon {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin: 10px;
+}
+
+.iconWa {
+    color: #1B97CC;
+    cursor: pointer;
+}
+
+.iconWa:hover {
+    color: #00bc0d;
+    transition: .3s ease-in-out;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .psikologSection {
+        margin: 0;
+    }
+
+    .psikologCard {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .psikologImage {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .psikologCard {
+        flex-direction: column;
+    }
+
+    .psikologImageBox {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .psikologImage {
+        width: 120px;
+    }
+
+    .psikologTitle {
+        font-size: 22px;
+    }
+
+    .psikologDescription {
+        font-size: 17px;
+        margin-top: 8px;
+    }
+}
