@@ -33,6 +33,11 @@ h2 {
 .jawaban button:focus{
     background-color:rgb(96, 96, 221);
 }
+
+.jawaban :hover{
+    background-color: red;
+}
+
 .tombol {
     display: flex;
     justify-content: end;
