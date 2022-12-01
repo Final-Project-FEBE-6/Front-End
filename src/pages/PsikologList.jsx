@@ -54,19 +54,11 @@ const PsikologList = () => {
                     Status: {psikolog.level}
                   </p>
                   <p className="psikologDescription">Pengalaman: turu</p>
-                </CardContent>
-                <Box className="boxIcon">
                   <WhatsAppIcon
                     className="iconWa"
                     sx={{ fontSize: "36px" }}
-                    onClick={() => {
-                      <ReactWhatsapp
-                        number="+62-882-6676-2332"
-                        message="Hello, help me please"
-                      />;
-                    }}
                   />
-                </Box>
+                </CardContent>
               </Card>
             );
           })}

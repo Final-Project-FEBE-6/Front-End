@@ -11,6 +11,7 @@
 
 .articleHeaderTitle {
     font-size: 36px;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -27,13 +28,16 @@
     color: #1B97CC;
 }
 
-.articleCard:hover {
-    color: #1B97CC;
-    transition: .3s ease-out;
-}
-
 .articleTitle {
     font-size: 24px;
+    color: #222;
+    font-weight: 600;
+    text-align: start;
+}
+
+.articleTitle:hover {
+    color: #1B97CC;
+    transition: .3s ease-in-out;
 }
 
 /* animation loading */

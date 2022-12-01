@@ -27,7 +27,7 @@ const Article = () => {
   }, []);
 
   return (
-    <div className="article">
+    <div className="article" style={{backgroundColor: '#ddd'}}>
       <Box
         sx={{ display: "flex", justifyContent: "center", color: "#222" }}
         className="articleBox"
@@ -52,6 +52,7 @@ const Article = () => {
                       sx={{ mt: 2, color: "#222", backgroundColor: "#eaeaea" }}
                     >
                       <CardActionArea
+                        className="articleCardAction"
                         onClick={() => {
                           navigate(`/article/${article.id}`);
                         }}
@@ -59,8 +60,8 @@ const Article = () => {
                         <CardMedia
                           component="img"
                           image={article.imageUrl}
-                          height="240px"
                           alt={article.title}
+                          sx={{height:'200px'}}
                         />
                         <CardContent className="articleContent" sx={{}}>
                           <h2 className="articleTitle">{article.title}</h2>
