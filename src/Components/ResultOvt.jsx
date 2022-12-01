@@ -4,43 +4,42 @@ import React from 'react'
 function ResultOvt() {
   const kategori = [
     {
-      testResult : "Berat",
+      testResult : "Tinggi",
       skor : "33 < POIN",
       deskripsi : <>
-                    Hasil tes kamu menunjukkan kamu memiliki persepsi tingkat stres yang <b>Berat</b>. Saat ini kamu cenderung merasa memiliki banyak beban dalam hidupmu.<br/><br />
-                    Mungkin kamu merasa tidak berdaya untuk menyelesaikan berbagai permasalahan yang kamu alami. Banyak hal tidak terduga yang terjadi dan kamu mulai merasa kehilangan kontrol atas hidupmu
+      <p><b>Tingkat Overthinking Tinggi</b> Kamu memikirkan hal negatif secara berulang. Kamu juga tidak dapat mengendalikan hal tersebut. Kamu terlalu fokus pada kejadian dan perasaan negatif yang pernah kamu alami. Hal ini yang terkadang membuatmu sulit beraktivitas sehari-hari, seperti berkonsentrasi.</p> 
                   </>
     },
     {
       testResult : "Sedang",
       skor : "17 s/d 32",
       deskripsi : <>
-                  Hasil tes kamu menunjukkan persepsi tingkat stres yang <b>Sedang</b>. Saat ini kamu cenderung merasa tidak nyaman dengan kehidupanmu.<br/><br />
-                  Mungkin kamu merasa ada hal-hal tidak terduga yang terjadi dalam hidupmu. Kamu juga mungkin mengalami kesulitan untuk mengatasi masalah-masalah yang sedang dihadapi.
+                  <p><b>Tingkat Overthinking Sedang </b>
+                  Kamu terkadang memikirkan hal negatif secara berulang. Tetapi Kamu masih dapat mengendalikan hal tersebut. Kamu terkadang fokus pada kejadian dan perasaan negatif yang pernah kamu alami. Hal ini yang terkadang membuatmu sulit berkonsentrasi.</p>
       </>
     },
     {
-      testResult : "Ringan",
+      testResult : "Rendah",
       skor : "POIN < 16",
       deskripsi : <>
-                    Hasil tes kamu menunjukkan persepsi tingkat stres yang <b>Ringan</b> Saat ini kamu cenderung merasa tidak nyaman dengan kehidupanmu. <br /><br />
-                    Mungkin kamu merasa ada hal-hal tidak terduga yang terjadi dalam hidupmu. Kamu juga mungkin mengalami kesulitan untuk mengatasi masalah-masalah yang sedang dihadapi.
+                    <p><b>Tingkat Overthinking Rendah</b> Kamu dapat mengendalikan pikiran-pikiran negatifmu dengan baik.<br/></p>
+                     Kamu tidak terlalu fokus pada kejadian dan perasaan negatif yang pernah kamu alami. Untuk terus bisa mengendalikan pikiranmu
                   </>
   }
   ]
   
   return (
-    <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 ml-20 mr-20 mt-10 mb-20">
+    <div className="grid gap-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 ml-20 mr-4 mt-10 mb-20">
                   {kategori.map((items, key) => (
                       <div className="w-full rounded-lg bg-sky-200 shadow-md lg:max-w-md hover:bg-white" key={key}>
                           <div className="p-4">
                               <h1 className="text-center text-3xl font-extrabold text-sky-600"> 
                                 {items.testResult}
                               </h1> <br />
-                              <h3 className="text-xl text-sky-600"> 
+                              <h3 className="text-2xl text-sky-600"> 
                                 OVT skor :
-                              </h3><h3 className="text-xl font-bold text-sky-600">{items.skor}</h3>
-                              <p className="mb-2 leading-normal text-black-700 text-base mb-2 mt-10">
+                              </h3><h3 className="text-2xl font-bold text-sky-600">{items.skor}</h3>
+                              <p className="leading-normal text-xl text-base mb-2 mt-10">
                                 {items.deskripsi}</p>
                           </div>
                       </div>
