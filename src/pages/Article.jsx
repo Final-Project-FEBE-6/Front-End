@@ -11,6 +11,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../assets/css/Article.css";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
+import Navbar from "../Components/Navbar";
 
 const Article = () => {
   const [articles, setArticles] = useState([]);
@@ -31,7 +32,7 @@ const Article = () => {
   return (
     <div className="article" style={{ backgroundColor: "#ddd" }}>
       <Box
-        sx={{ display: "flex", justifyContent: "center", color: "#222" }}
+        sx={{ display: "flex", justifyContent: "center", color: "#222"}}
         className="articleBox"
       >
         <Box>

@@ -25,25 +25,25 @@ const Navbar = () => {
                         href="/"
                         className=" hover:bg-sky-300 text-white px-2 py-1 rounded-md text-lg font-medium"
                       >
-                        Home
+                        Beranda
                       </a>
     
                       <a
                         href="/test"
                         className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                       >
-                        Test
+                        Tes
                       </a>
     
                       <a
-                        href="#"
+                        href="/article"
                         className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                       >
-                        Articel
+                        Artikel
                       </a>
     
                       <a
-                        href="#"
+                        href="/psikolog"
                         className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                       >
                         Psikolog
@@ -53,7 +53,7 @@ const Navbar = () => {
                         href="/about"
                         className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                       >
-                        About
+                        Tentang
                       </a>
     
                       <Login />

@@ -4,8 +4,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import "../assets/css/PsikologList.css";
-import ReactWhatsapp from "react-whatsapp";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
+import { Link } from "react-router-dom";
 
 const PsikologList = () => {
   const [psikologs, setPsikologs] = useState([]);
@@ -60,7 +60,7 @@ const PsikologList = () => {
                   <p className="psikologDescription">
                     Pengalaman: {psikolog.pengalaman}
                   </p>
-                  <a href="https://api.whatsapp.com/send?phone=6288261020073&text=Halo%20Kak,%20saya%20mau%20konsultasi">
+                  <a href={`https://api.whatsapp.com/send?phone=${psikolog.no_hp}&text=Halo%20Kak,%20saya%20mau%20konsultasi`}>
                     <WhatsAppIcon
                       className="iconWa"
                       sx={{ fontSize: "36px" }}
