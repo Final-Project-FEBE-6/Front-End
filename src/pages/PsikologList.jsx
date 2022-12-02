@@ -12,12 +12,14 @@ const PsikologList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(function () {
-    axios.get(`https://be-skilvul-production.up.railway.app/psikolog`, {headers: {'Authorization': `Bearer ` + localStorage.getItem('token')}})
-    .then((response) => {
-      console.log(response.data.data);
-      setPsikologs(response.data.data);
-      setLoading(false);
-    });
+    axios
+      .get(`https://be-skilvul-production.up.railway.app/psikolog`, {
+        headers: { Authorization: `Bearer ` + localStorage.getItem("token") },
+      })
+      .then((response) => {
+        setPsikologs(response.data.data);
+        setLoading(false);
+      });
   }, []);
 
   return (
@@ -55,8 +57,15 @@ const PsikologList = () => {
                   <p className="psikologDescription">
                     Alamat: {psikolog.alamat}
                   </p>
-                  <p className="psikologDescription">Pengalaman: {psikolog.pengalaman}</p>
-                  <WhatsAppIcon className="iconWa" sx={{ fontSize: "36px" }} />
+                  <p className="psikologDescription">
+                    Pengalaman: {psikolog.pengalaman}
+                  </p>
+                  <a href="https://api.whatsapp.com/send?phone=6288261020073&text=Halo%20Kak,%20saya%20mau%20konsultasi">
+                    <WhatsAppIcon
+                      className="iconWa"
+                      sx={{ fontSize: "36px" }}
+                    />
+                  </a>
                 </CardContent>
               </Card>
             );

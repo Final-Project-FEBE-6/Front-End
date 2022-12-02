@@ -13,11 +13,12 @@ const ArticleDetail = () => {
   useEffect(
     function () {
       axios
-        .get(`https://be-skilvul-production.up.railway.app/artikel/${params._id}`, {headers: {'Authorization': `Bearer ` + localStorage.getItem('token')}})
+        .get(`https://be-skilvul-production.up.railway.app/artikel/${params.id}`, {
+          headers: { Authorization: `Bearer ` + localStorage.getItem("token") },
+        })
         .then((response) => {
-          console.log(response.data);
-          // setArticle(response.data.data);
-          // setLoading(false);
+          setArticle(response.data.data);
+          setLoading(false);
         });
     },
     [params]
@@ -32,20 +33,20 @@ const ArticleDetail = () => {
       ) : (
         <div className="article">
           <article className="articleDetail">
-            <h1 className="articleDetailTitle">{article.title}</h1>
+            <h1 className="articleDetailTitle">{article.judul}</h1>
             <time className="articleDetailTime">
-              {new Date(article.publishedAt).toLocaleDateString()}
+              {new Date(article.tgl_publish).toLocaleDateString()}
             </time>
             <img
               className="articleDetailImg"
-              src={article.imageUrl}
-              alt={article.title}
+              src={article.image}
+              alt={article.judul}
             />
-            <p className="articleDetailSummary">{article.summary}</p>
+            <p className="articleDetailSummary">{article.isi}</p>
             <p className="articleDetailSource">
               Source:{" "}
-              <a href={article.url} target="_blank" rel="noreferrer">
-                {article.newsSite}
+              <a href={article.sumber} target="_blank" rel="noreferrer">
+                {article.judul}
               </a>
             </p>
           </article>

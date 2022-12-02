@@ -14,6 +14,8 @@
 .articleDetail {
     color: #222;
     border-bottom: 1px solid #999;
+    display: flex;
+    flex-direction: column;
 }
 
 .articleLoading {
@@ -22,7 +24,7 @@
     top: 40%;
     z-index: 9;
     animation: .8s spin infinite linear;
-    color: #1B97CC;
+    color: #222;
 }
 
 /* animation loading */
@@ -37,6 +39,7 @@
 
 .articleDetailTitle {
     font-size: 32px;
+    font-weight: 600;
     margin: 16px 0;
 }
 

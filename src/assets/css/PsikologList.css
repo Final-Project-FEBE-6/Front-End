@@ -8,7 +8,7 @@
     top: 40%;
     z-index: 9;
     animation: .8s spin infinite linear;
-    color: #1B97CC;
+    color: #222;
 }
 
 /* animation loading */
@@ -39,7 +39,7 @@
 .psikologTitle {
     font-size: 30px;
     font-weight: 600;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #bbb;
     margin-top: 15px;
 }
 

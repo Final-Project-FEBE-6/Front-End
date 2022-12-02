@@ -47,9 +47,8 @@ const Article = () => {
             <Box style={{}} mt={2}>
               {articles.map(function (article) {
                 return (
-                  <div className="  ">
+                  <div key={article._id}>
                     <Card
-                    key={article.judul}
                       className="articleCard"
                       sx={{ mt: 2, color: "#222", backgroundColor: "#eaeaea" }}
                     >
