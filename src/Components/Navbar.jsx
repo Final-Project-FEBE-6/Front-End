@@ -4,10 +4,14 @@ import { Link } from "react-router-dom";
 import { Transition } from "@headlessui/react";
 import "./Navbar.css";
 import Login from "./Login";
+import { useJwt } from "react-jwt";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLogin, setIsLogin] = useState();
+  // const token = localStorage.getItem("token");
+  const [token, setToken] = useState(localStorage.getItem('token'));
+  const { decodedToken } = useJwt(token);
 
   return (
     <div>
@@ -59,7 +63,7 @@ const Navbar = () => {
                   >
                     Tentang
                   </a>
-                  <Login />
+                  {token ? <i className="outline outline-2 rounded-lg py-2 px-4 font-bold text-white">Hai Guys!!</i> : <Login onSetToken={setToken} />}
                 </div>
               </div>
             </div>

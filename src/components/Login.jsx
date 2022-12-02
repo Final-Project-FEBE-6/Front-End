@@ -25,7 +25,7 @@ const styleModal = {
   borderRadius: "5px",
 };
 
-export default function Login() {
+export default function Login({onSetToken}) {
   const [open, setOpen] = React.useState(false);
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -82,7 +82,7 @@ export default function Login() {
       })
       .then((data) => {
         localStorage.setItem("token", data.data.token)
-        localStorage.setItem("nama", data.name)
+        onSetToken(data.data.token)
         navigate("/")
         alert("Login Berhasil")
       })
