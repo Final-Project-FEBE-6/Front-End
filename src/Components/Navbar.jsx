@@ -161,12 +161,7 @@ const Navbar = () => {
                   About
                 </a>
 
-                <button
-                  href="/login"
-                  className="outline outline-2 text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-center font-medium"
-                >
-                  Masuk
-                </button>
+                {token ? <i className="outline outline-2 rounded-lg py-2 px-4 font-bold text-white">Hai Guys!!</i> : <Login onSetToken={setToken} />}
               </div>
             </div>
           )}
