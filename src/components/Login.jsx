@@ -82,13 +82,13 @@ export default function Login() {
       })
       .then((data) => {
         localStorage.setItem("token", data.data.token)
+        localStorage.setItem("nama", data.name)
         navigate("/")
         alert("Login Berhasil")
       })
       .catch((err) => {
         alert("Form Harus Diisi dengan Benar!");
-      }); 
-      console.log("cobbas")
+      });
         
   };
    
