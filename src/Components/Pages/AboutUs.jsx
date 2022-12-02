@@ -25,7 +25,7 @@ const AboutUs = () => {
           },
           {
             gambar : `${brucel}`,
-            nama : "Brucel Duta Samudra",
+            nama : "Brucel Duta Samudera",
             title : "Front-End Dev",
             pesan : "Menuju tak terbatas dan melampauinya"
           },
