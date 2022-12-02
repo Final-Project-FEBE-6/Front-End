@@ -46,7 +46,7 @@ const ArticleDetail = () => {
             <p className="articleDetailSource">
               Source:{" "}
               <a href={article.sumber} target="_blank" rel="noreferrer">
-                {article.judul}
+                {article.nama_sumber}
               </a>
             </p>
           </article>
