@@ -3,11 +3,9 @@ import {useDispatch} from 'react-redux'
 import "../pages/Result.css"
 import picture from '../assets/result.png'
 import {Link} from 'react-router-dom'
-// import ResultCategory from './ResultCategory'
 import {
   increment_skor,
 } from "../redux/reducer/SkorReducer"
-import ResultKesepian from './ResultKesepian'
 
 const soal = [
    "1. Seberapa sering kamu merasa tidak bisa meminta bantuan ke siapapun? ",
@@ -68,15 +66,17 @@ function SoalKesepian() {
        </div>
      </div>
     : 
-    <div className='card-result'>
+    <div className='w-full'>
       <div className="mt-10">
-        <div className="flex justify-center ">
-          <div className="rounded-lg shadow-lg bg-white max-w-md shadow-md">
+        <div className="flex justify-center">
+          <div className="rounded-lg shadow-lg bg-white max-w-2xl shadow-md">
             <h1 className="text-2xl font-black text-violet-400 text-center mt-3 mb-5 shadow-sm">Sapasikolog.com</h1>
               <div className="p-6">
                   <img src={picture} alt="Image Not Found"/>
                   <h3 className="text-center text-gray-900 text-2xl font-extrabold mb-10">SKOR TES ANDA : {hasilSkor}</h3>
-                  <p className="text-black-700 text-center mb-2">Informasi selengkapnya ada pada card dibawah ini</p>
+                  <h3 className="text-center text-gray-700 text-xl font-extrabold mb-2">Hasil tes menunjukkan bahwa kamu merasa cukup kesepian. </h3>
+                  <p className="text-black-700 text-center mb-2">Saat ini, kamu memiliki beberapa orang yang bisa kamu percayai dan dapat kamu andalkan, akan tetapi, kamu masih merasakan adanya kekurangan dari interaksi yang kamu lakukan. Sesekali, kamu merasakan adanya kekosongan dalam kehidupan sosialmu.</p>
+                  <p className="text-black-700 text-center mb-2">Kekosongan itu ada baiknya kamu isi dengan melakukan aktivitas yang dapat membantumu membangun hubungan yang lebih bermakna. Kamu bisa mengikuti kegiatan online yang melibatkan banyak orang, seperti bermain game.</p>
                   <div className="text-center mt-10">
                     <button
                       type="button"
@@ -89,7 +89,6 @@ function SoalKesepian() {
           </div>
         </div>
       </div>
-      <ResultKesepian/>
     </div>}
     </>
   )

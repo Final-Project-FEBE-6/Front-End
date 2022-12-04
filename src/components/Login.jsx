@@ -27,6 +27,7 @@ const styleModal = {
 
 export default function Login() {
   const [open, setOpen] = React.useState(false);
+  const [user, setUser] = React.useState("")
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
