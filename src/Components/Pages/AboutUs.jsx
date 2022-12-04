@@ -21,31 +21,31 @@ const AboutUs = () => {
             gambar : `${himawan}`,
             nama : "Himawan Ihza Pradana",
             title : "Front-End Dev & Leader",
-            pesan : "Not Bad"
+            pesan : "Mendalami Front-End Web Development sangatlah seruu dan menyenangkan"
           },
           {
             gambar : `${brucel}`,
-            nama : "Brucel Duta Samudra",
+            nama : "Brucel Duta Samudera",
             title : "Front-End Dev",
-            pesan : "Not Bad"
+            pesan : "Menuju tak terbatas dan melampauinya"
           },
           {
             gambar : `${arif}`,
             nama : "Arif Setiawan",
             title : "Back-End Dev",
-            pesan : "Not Bad"
+            pesan : "Selama mengkuti StudiIndependen program Back-end Web Development di skilvul ini menurut saya sangat mengesankan, banyak ilmu yang saya dapatkan disini dan mentor-mentor nya sangat ramah dan membembing kita dengan baik."
           },
           {
             gambar : `${vanya}`,
             nama : "Vanya Mayazura P.",
             title : "Back-End Dev",
-            pesan : "Not Bad"
+            pesan : "Skilvul membuat saya belajar hal baru dan semangat baru pokoknya mantap"
           },
           {
             gambar : `${dino}`,
             nama : "Zuhri Agusdino",
             title : "Front-End Dev",
-            pesan : "Not Bad"
+            pesan : "Studi independent Back-end Web Development dari Skilvul memberi saya banyak pengetahuan dan sangat bermanfaat. Semoga kedepan nya materi pembelajaran yang dipakai skilvul lebih mendalam dan lebih baik lagi"
           },
       ]
 

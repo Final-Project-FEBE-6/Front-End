@@ -25,7 +25,7 @@ const styleModal = {
   borderRadius: "5px",
 };
 
-export default function Login() {
+export default function Login({onSetToken}) {
   const [open, setOpen] = React.useState(false);
   const [user, setUser] = React.useState("")
   const [email, setEmail] = React.useState("");
@@ -36,8 +36,10 @@ export default function Login() {
 
   const navigate = useNavigate()
   const clickNavigate = () => {
-    navigate("/")
+    navigate("/register")
   }
+
+  
 
   // const handleLogin = async () => {
   //   // *IF API STATUS 200
@@ -81,13 +83,13 @@ export default function Login() {
       })
       .then((data) => {
         localStorage.setItem("token", data.data.token)
-        clickNavigate()
+        onSetToken(data.data.token)
+        navigate("/")
         alert("Login Berhasil")
       })
       .catch((err) => {
         alert("Form Harus Diisi dengan Benar!");
-      }); 
-      console.log("cobbas")
+      });
         
   };
    
