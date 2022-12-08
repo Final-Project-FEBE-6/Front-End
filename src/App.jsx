@@ -24,7 +24,6 @@ function App() {
         <Route path="/stress" element={<SoalStress />} />
         <Route path="/kesepian" element={<SoalKesepian />} />
         <Route path="/ovt" element={<SoalOvt />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/article" element={<Article />} />
         <Route path="/article/:id" element={<ArticleDetail />} />
         <Route path="/psikolog" element={<PsikologList />} />

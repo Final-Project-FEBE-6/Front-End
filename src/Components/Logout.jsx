@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import { useNavigate } from "react-router-dom";
+import "../assets/css/Logout.css";
 
 const style = {
   position: "absolute",
@@ -16,6 +17,7 @@ const style = {
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
+  borderRadius: "5px",
 };
 
 const Logout = () => {
@@ -26,12 +28,14 @@ const Logout = () => {
   const handleClose = () => setOpen(false);
   const handleLogout = () => {
     localStorage.clear();
-    navigate("/")
+    navigate("/");
   };
 
   return (
     <div>
-      <Button onClick={handleOpen}>LOGOUT</Button>
+      <Button className="logoutButton" onClick={handleOpen} sx={{color: '#222', backgroundColor:'#eaeaea', padding: '8px 20px'}}>
+        LOGOUT
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -40,13 +44,23 @@ const Logout = () => {
       >
         <Box sx={style}>
           <Box className="logoutIconBox">
-            <ErrorOutlineIcon className="logoutIcon" />
+            <ErrorOutlineIcon className="logoutIcon" fontSize="large" />
           </Box>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <Typography
+            id="modal-modal-description"
+            className="logoutDescription"
+            sx={{ mt: 2, fontSize: 14 }}
+          >
             Ingin keluar dari akun?
           </Typography>
-          <Button onClick={handleClose}>Kembali</Button>
-          <Button onClick={handleLogout}>Keluar</Button>
+          <Box className="logoutBoxButton">
+            <Button className="logoutButton kembali" onClick={handleClose} sx={{color: '#222'}}>
+              Kembali
+            </Button>
+            <Button className="logoutButton keluar" onClick={handleLogout} sx={{color: '#222'}}>
+              Keluar
+            </Button>
+          </Box>
         </Box>
       </Modal>
     </div>
