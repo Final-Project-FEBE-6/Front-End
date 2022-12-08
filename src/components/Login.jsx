@@ -38,40 +38,6 @@ export default function Login({onSetToken}) {
     navigate("/register")
   }
 
-  
-
-  // const handleLogin = async () => {
-  //   // *IF API STATUS 200
-  //   try {
-  //     const users = await fetch(
-  //       "https://be-skilvul-production.up.railway.app/user/login"
-  //     ).then((response) => response.json());
-
-  //     const user = users.find((us) => {
-  //       return us.email === email;
-  //     });
-
-  //     if (user === undefined) {
-  //       throw new Error("User Not Found");
-  //     }
-  //     if (password !== user.password) {
-  //       throw new Error("Email or Password not Correct!");
-  //     }
-
-  //     // Todo: IF LOGIN SUCCESS
-  //     localStorage.setItem("name", user.name);
-  //     return loginSuccess(user.name);
-
-  //     // *IF API STATUS 404
-  //   } catch (error) {
-  //     alert(error.message);
-  //   }
-  // };
-
-  // const loginSuccess = (username) => {
-  //   alert(`Selamat datang ${username}`);
-  //   return setOpen(false);
-  // };
   const handleLogin = (e) => {
     e.preventDefault();
     
@@ -106,7 +72,7 @@ export default function Login({onSetToken}) {
           fontSize:'16px'
         }}
       >
-        MASUK
+        LOGIN
       </Button>
       <Modal
         open={open}

@@ -11,6 +11,7 @@ import Login from "./Components/Login";
 import Article from "./pages/Article";
 import PsikologList from "./pages/PsikologList";
 import ArticleDetail from "./pages/ArticleDetail";
+import Logout from "./Components/Logout";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/article" element={<Article />} />
         <Route path="/article/:id" element={<ArticleDetail />} />
         <Route path="/psikolog" element={<PsikologList />} />
+        <Route path="/logout" element={<Logout />} />
       </Routes>
     </div>
   );
