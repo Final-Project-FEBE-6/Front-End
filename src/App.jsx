@@ -11,6 +11,7 @@ import Login from "./Components/Login";
 import Article from "./pages/Article";
 import PsikologList from "./pages/PsikologList";
 import ArticleDetail from "./pages/ArticleDetail";
+import Logout from "./Components/Logout";
 
 function App() {
   return (
@@ -23,7 +24,6 @@ function App() {
         <Route path="/stress" element={<SoalStress />} />
         <Route path="/kesepian" element={<SoalKesepian />} />
         <Route path="/ovt" element={<SoalOvt />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/article" element={<Article />} />
         <Route path="/article/:id" element={<ArticleDetail />} />
         <Route path="/psikolog" element={<PsikologList />} />

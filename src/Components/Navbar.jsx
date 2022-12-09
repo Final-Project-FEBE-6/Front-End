@@ -5,12 +5,13 @@ import { Transition } from "@headlessui/react";
 import "./Navbar.css";
 import Login from "./Login";
 import { useJwt } from "react-jwt";
+import Logout from "./Logout";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLogin, setIsLogin] = useState();
   // const token = localStorage.getItem("token");
-  const [token, setToken] = useState(localStorage.getItem('token'));
+  const [token, setToken] = useState(localStorage.getItem("token"));
   const { decodedToken } = useJwt(token);
 
   return (
@@ -63,7 +64,16 @@ const Navbar = () => {
                   >
                     Tentang
                   </a>
-                  {token ? <i className="outline outline-2 rounded-lg py-2 px-4 font-bold text-white">Hai Guys!!</i> : <Login onSetToken={setToken} />}
+                  {token ? (
+                    <div className="flex gap-5" style={{marginLeft: '5em'}}>
+                      <i className="outline outline-2 rounded-lg py-2 px-4 font-bold text-white">
+                        Hai Guys!!
+                      </i>
+                      <Logout />
+                    </div>
+                  ) : (
+                    <Login onSetToken={setToken} />
+                  )}
                 </div>
               </div>
             </div>
@@ -130,21 +140,21 @@ const Navbar = () => {
                   href="/"
                   className="text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Home
+                  Beranda
                 </a>
 
                 <a
                   href="/test"
                   className="text-white hover:bg-cyan-500 hover:text-white block px-4 py-2 rounded-md text-base font-medium"
                 >
-                  Test
+                  Tes
                 </a>
 
                 <a
                   href="/articel"
                   className="text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Articel
+                  Artikel
                 </a>
 
                 <a
@@ -158,10 +168,19 @@ const Navbar = () => {
                   href="/about"
                   className="text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  About
+                  Tentang
                 </a>
 
-                {token ? <i className="outline outline-2 rounded-lg py-2 px-4 font-bold text-white">Hai Guys!!</i> : <Login onSetToken={setToken} />}
+                {token ? (
+                  <div className="flex gap-5">
+                      <i className="outline outline-2 rounded-lg py-2 px-4 font-bold text-white">
+                        Hai Guys!!
+                      </i>
+                      <Logout />
+                    </div>
+                ) : (
+                  <Login onSetToken={setToken} />
+                )}
               </div>
             </div>
           )}
