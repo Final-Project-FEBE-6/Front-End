@@ -13,7 +13,9 @@
 
 .logoutBoxButton {
     text-align: center;
+    margin-top: 18px;
 }
 
-.logoutButton {
+.keluar:hover {
+    color: #222;
 }

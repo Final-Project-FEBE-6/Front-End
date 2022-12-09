@@ -33,7 +33,16 @@ const Logout = () => {
 
   return (
     <div>
-      <Button className="logoutButton" onClick={handleOpen} sx={{color: '#222', backgroundColor:'#eaeaea', padding: '8px 20px'}}>
+      <Button
+        className="logoutButton"
+        onClick={handleOpen}
+        sx={{
+          color: "#222",
+          backgroundColor: "#eaeaea",
+          padding: "8px 20px",
+          fontWeight: 600,
+        }}
+      >
         LOGOUT
       </Button>
       <Modal
@@ -54,10 +63,32 @@ const Logout = () => {
             Ingin keluar dari akun?
           </Typography>
           <Box className="logoutBoxButton">
-            <Button className="logoutButton kembali" onClick={handleClose} sx={{color: '#222'}}>
+            <Button
+              className="logoutButton kembali"
+              onClick={handleClose}
+              sx={{
+                color: "#222",
+                backgroundColor: "#eaeaea",
+                marginRight: "8px",
+                padding: "5px 15px",
+                fontSize: "12px",
+                fontWeight: "600",
+              }}
+            >
               Kembali
             </Button>
-            <Button className="logoutButton keluar" onClick={handleLogout} sx={{color: '#222'}}>
+            <Button
+              className="logoutButton keluar"
+              onClick={handleLogout}
+              sx={{
+                color: "#eaeaea",
+                backgroundColor: "#1b97cc",
+                marginLeft: "8px",
+                padding: "5px 15px",
+                fontSize: "12px",
+                fontWeight: "600",
+              }}
+            >
               Keluar
             </Button>
           </Box>

@@ -66,7 +66,7 @@ export default function Login({onSetToken}) {
         onClick={handleOpen}
         sx={{
           backgroundColor: "white",
-          fontWeight: 500,
+          fontWeight: 600,
           color: "black",
           padding:'6px 20px',
           fontSize:'16px'
