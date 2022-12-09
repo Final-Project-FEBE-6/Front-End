@@ -172,7 +172,7 @@ const Navbar = () => {
                 </a>
 
                 {token ? (
-                  <div className="flex gap-5" style={{}}>
+                  <div className="flex gap-5">
                       <i className="outline outline-2 rounded-lg py-2 px-4 font-bold text-white">
                         Hai Guys!!
                       </i>
