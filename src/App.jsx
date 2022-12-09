@@ -27,7 +27,6 @@ function App() {
         <Route path="/article" element={<Article />} />
         <Route path="/article/:id" element={<ArticleDetail />} />
         <Route path="/psikolog" element={<PsikologList />} />
-        <Route path="/logout" element={<Logout />} />
       </Routes>
     </div>
   );

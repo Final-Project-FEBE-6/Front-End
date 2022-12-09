@@ -172,12 +172,12 @@ const Navbar = () => {
                 </a>
 
                 {token ? (
-                  <div>
-                    <i className="outline outline-2 rounded-lg py-2 px-4 font-bold text-white">
-                      Hai Guys!!
-                    </i>
-                    <Logout />
-                  </div>
+                  <div className="flex gap-5" style={{}}>
+                      <i className="outline outline-2 rounded-lg py-2 px-4 font-bold text-white">
+                        Hai Guys!!
+                      </i>
+                      <Logout />
+                    </div>
                 ) : (
                   <Login onSetToken={setToken} />
                 )}
