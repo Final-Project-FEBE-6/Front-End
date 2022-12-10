@@ -37,6 +37,28 @@
     }
 }
 
+.articleIconBackBox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100px;
+    color: #999;
+    margin-bottom: 0px;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+.articleIconBackBox:hover {
+    background-color: #1B97CC;
+    color: #222;
+    transition: .3s ease-in-out;
+}
+
+.articleIconBackDescription {
+    font-size: 15px;
+    font-weight: bold;
+}
+
 .articleDetailTitle {
     font-size: 32px;
     font-weight: 600;
