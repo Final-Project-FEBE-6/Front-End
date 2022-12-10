@@ -152,17 +152,18 @@ const Navbar = () => {
                 </Link>
                 
                 <Link
-                  to={"/article"}
+                  to={"/article"} className="text-white hover:bg-cyan-500 hover:text-white block px-4 py-2 rounded-md text-base font-medium">
+                  
                   Artikel
                 </Link>
 
                 <Link
-                  to={"/psikolog"}
+                  to={"/psikolog"} className="text-white hover:bg-cyan-500 hover:text-white block px-4 py-2 rounded-md text-base font-medium">
                   Psikolog
                 </Link>
 
                 <Link
-                  to={"/about"}
+                  to={"/about"} className="text-white hover:bg-cyan-500 hover:text-white block px-4 py-2 rounded-md text-base font-medium">
                   Tentang
                 </Link>
 

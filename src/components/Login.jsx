@@ -51,7 +51,6 @@ export default function Login({onSetToken}) {
         localStorage.setItem("token", data.data.token)
         onSetToken(data.data.token)
         navigate("/")
-        alert("Login Berhasil")
       })
       .catch((err) => {
         alert("Form Harus Diisi dengan Benar!");
