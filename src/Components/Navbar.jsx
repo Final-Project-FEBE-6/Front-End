@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Transition } from "@headlessui/react";
 import "./Navbar.css";
 import Login from "./Login";
@@ -13,6 +13,7 @@ const Navbar = () => {
   // const token = localStorage.getItem("token");
   const [token, setToken] = useState(localStorage.getItem("token"));
   const { decodedToken } = useJwt(token);
+  const navigate = useNavigate()
 
   return (
     <div>
@@ -24,7 +25,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <h1 className="text-white text-3xl font-extrabold ">
+                <h1 className="text-white text-3xl font-extrabold cursor-pointer" onClick={() => navigate("/")}>
                   SapaSikolog.com
                 </h1>
               </div>
