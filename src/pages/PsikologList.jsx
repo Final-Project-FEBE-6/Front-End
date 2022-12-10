@@ -5,11 +5,13 @@ import React, { useEffect, useState } from "react";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import "../assets/css/PsikologList.css";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 const PsikologList = () => {
   const [psikologs, setPsikologs] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate()
 
   useEffect(function () {
     axios
@@ -30,6 +32,10 @@ const PsikologList = () => {
         </Box>
       ) : (
         <Box className="psikologBox">
+          <div className="articleIconBackBox" onClick={() => navigate("/")} style={{color:'#ccc', marginTop:'14px', marginBottom:'24px'}}>
+            <ArrowBackIosNewIcon fontSize="small" />
+            <p className="articleIconBackDescription">Kembali</p>
+          </div>
           {psikologs.map(function (psikolog) {
             return (
               <Card
@@ -60,7 +66,9 @@ const PsikologList = () => {
                   <p className="psikologDescription">
                     Pengalaman: {psikolog.pengalaman}
                   </p>
-                  <a href={`https://api.whatsapp.com/send?phone=${psikolog.no_hp}&text=Halo%20Kak,%20saya%20mau%20konsultasi`}>
+                  <a
+                    href={`https://api.whatsapp.com/send?phone=${psikolog.no_hp}&text=Halo%20Kak,%20saya%20mau%20konsultasi`}
+                  >
                     <WhatsAppIcon
                       className="iconWa"
                       sx={{ fontSize: "36px" }}
