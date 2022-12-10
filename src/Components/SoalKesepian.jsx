@@ -3,7 +3,6 @@ import {useDispatch} from 'react-redux'
 import "../pages/Result.css"
 import picture from '../assets/result.png'
 import {Link} from 'react-router-dom'
-// import ResultCategory from './ResultCategory'
 import {
   increment_skor,
 } from "../redux/reducer/SkorReducer"
