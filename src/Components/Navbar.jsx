@@ -31,40 +31,40 @@ const Navbar = () => {
               </div>
               <div className="hidden md:block">
                 <div className="ml-20 flex items-baseline space-x-4">
-                  <a
-                    href="/"
+                  <Link
+                    to={"/"}
                     className=" hover:bg-sky-300 text-white px-2 py-1 rounded-md text-lg font-medium"
                   >
                     Beranda
-                  </a>
+                  </Link>
 
-                  <a
-                    href="/test"
+                  <Link
+                    to={"/test"}
                     className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                   >
                     Tes
-                  </a>
+                  </Link>
 
-                  <a
-                    href="/article"
+                  <Link
+                    to={"/article"}
                     className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                   >
                     Artikel
-                  </a>
+                  </Link>
 
-                  <a
-                    href="/psikolog"
+                  <Link
+                    to={"/psikolog"}
                     className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                   >
                     Psikolog
-                  </a>
+                  </Link>
 
-                  <a
-                    href="/about"
+                  <Link
+                    to={"/about"}
                     className="text-white hover:bg-sky-300 hover:text-white px-2 py-1 rounded-md text-lg font-medium"
                   >
                     Tentang
-                  </a>
+                  </Link>
                   {token ? (
                     <div className="flex gap-5" style={{marginLeft: '5em'}}>
                       <i className="outline outline-2 rounded-lg py-2 px-4 font-bold text-white">
@@ -137,40 +137,40 @@ const Navbar = () => {
           {(open) => (
             <div className="md:hidden ml-4">
               <div open={open} className="px-2 pt-2 pb-3 space-y-1 sm:px-3 ">
-                <a
-                  href="/"
+                <Link
+                  to={"/"}
                   className="text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Beranda
-                </a>
+                </Link>
 
-                <a
-                  href="/test"
+                <Link
+                  to={"/test"}
                   className="text-white hover:bg-cyan-500 hover:text-white block px-4 py-2 rounded-md text-base font-medium"
                 >
                   Tes
-                </a>
+                </Link>
 
-                <a
-                  href="#"
+                <Link
+                  to={"/article"}
                   className="text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Artikel
-                </a>
+                </Link>
 
-                <a
-                  href="#"
+                <Link
+                  to={"/psikolog"}
                   className="text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Psikolog
-                </a>
+                </Link>
 
-                <a
-                  href="\about"
+                <Link
+                  to={"/about"}
                   className="text-white hover:bg-cyan-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Tentang
-                </a>
+                </Link>
 
                 {token ? (
                   <div className="flex gap-5" style={{}}>
