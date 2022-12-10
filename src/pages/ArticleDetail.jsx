@@ -1,21 +1,28 @@
 import { Box } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "../assets/css/ArticleDetail.css";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 const ArticleDetail = () => {
   const params = useParams();
   const [article, setArticle] = useState({});
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate()
 
   useEffect(
     function () {
       axios
-        .get(`https://be-skilvul-production.up.railway.app/artikel/${params.id}`, {
-          headers: { Authorization: `Bearer ` + localStorage.getItem("token") },
-        })
+        .get(
+          `https://be-skilvul-production.up.railway.app/artikel/${params.id}`,
+          {
+            headers: {
+              Authorization: `Bearer ` + localStorage.getItem("token"),
+            },
+          }
+        )
         .then((response) => {
           setArticle(response.data.data);
           setLoading(false);
@@ -33,6 +40,10 @@ const ArticleDetail = () => {
       ) : (
         <div className="article">
           <article className="articleDetail">
+            <div className="articleIconBackBox" onClick={() => navigate("/article")}>
+              <ArrowBackIosNewIcon fontSize="small" />
+              <p className="articleIconBackDescription">Kembali</p>
+            </div>
             <h1 className="articleDetailTitle">{article.judul}</h1>
             <time className="articleDetailTime">
               {new Date(article.tgl_publish).toLocaleDateString()}

@@ -11,6 +11,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../assets/css/Article.css";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import Navbar from "../Components/Navbar";
 
 const Article = () => {
@@ -32,10 +33,14 @@ const Article = () => {
   return (
     <div className="article" style={{ backgroundColor: "#ddd" }}>
       <Box
-        sx={{ display: "flex", justifyContent: "center", color: "#222"}}
+        sx={{ display: "flex", justifyContent: "center", color: "#222" }}
         className="articleBox"
       >
         <Box>
+          <div className="articleIconBackBox" onClick={() => navigate("/")}>
+            <ArrowBackIosNewIcon fontSize="small" />
+            <p className="articleIconBackDescription">Kembali</p>
+          </div>
           <h1 className="articleHeaderTitle">ARTIKEL</h1>
           <p className="articleHeaderDescribe">
             Baca beberapa artikel dibawah agar pikiran anda jadi lebih cerdas :
