@@ -23,7 +23,7 @@
 .articleIconBackBox:hover {
     background-color: #1B97CC;
     color: #222;
-    transition: .3s ease-in-out;
+    transition: s ease-in-out;
 }
 
 .articleIconBackDescription {
