@@ -67,7 +67,7 @@ const Navbar = () => {
                   </Link>
                   {token ? (
                     <div className="flex gap-5" style={{marginLeft: '5em'}}>
-                      <i className="outline outline-2 rounded-lg py-2 px-4 font-bold text-white">
+                      <i className="rounded-lg py-2 px-4 font-bold text-white">
                         Hai Guys!!
                       </i>
                       <Logout />
@@ -169,7 +169,7 @@ const Navbar = () => {
 
                 {token ? (
                   <div className="flex gap-5">
-                      <i className="outline outline-2 rounded-lg py-2 px-4 font-bold text-white">
+                      <i className="rounded-lg py-2 px-4 font-bold text-white">
                         Hai Guys!!
                       </i>
                       <Logout />
