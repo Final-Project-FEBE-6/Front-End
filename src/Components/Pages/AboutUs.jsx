@@ -25,7 +25,7 @@ const AboutUs = () => {
           },
           {
             gambar : `${brucel}`,
-            nama : "Brucel Duta Samudera",
+            nama : "Brucel D. Samudera",
             title : "Front-End Dev",
             pesan : "Menuju tak terbatas dan melampauinya"
           },
@@ -44,7 +44,7 @@ const AboutUs = () => {
           {
             gambar : `${dino}`,
             nama : "Zuhri Agusdino",
-            title : "Front-End Dev",
+            title : "Back-End Dev",
             pesan : "Studi independent Back-end Web Development dari Skilvul memberi saya banyak pengetahuan dan sangat bermanfaat. Semoga kedepan nya materi pembelajaran yang dipakai skilvul lebih mendalam dan lebih baik lagi"
           },
       ]
@@ -66,7 +66,7 @@ const AboutUs = () => {
         kategori : "Ringan, Sedang, Berat"
       },
       {
-        fitur : "Fitur Informasi Articel",
+        fitur : "Fitur Informasi Artikel",
         deskripsi : "Pada bagian ini berfungsi untuk menampilkan beberapa articel terbaru terkait dengan pentingnya kesehatan mental dan beberapa literatur mengenai kesehatan mental yang umum dialami remaja",
         kategori : ""
       },
